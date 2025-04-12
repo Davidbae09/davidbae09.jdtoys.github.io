@@ -1,0 +1,123 @@
+{
+    "admins": [
+      {
+        "id": 1,
+        "username": "admin",
+        "password": "40bd001563085fc35165329ea1ff5c5ecbdbbeef"
+      }
+    ],
+    "products": [
+      {
+        "id": 1,
+        "name": "Papan Tulis Anak 30x40",
+        "price": 18000,
+        "description": "Papan tulis anak ukuran 30x40 cm, ringan dan mudah digunakan untuk belajar menulis dan menggambar.",
+        "image": "images/uploads/papan-tulis-kecil.webp"
+      },
+      {
+        "id": 2,
+        "name": "Kaki Penyanggah",
+        "price": 15000,
+        "description": "Kaki penyanggah kokoh untuk papan tulis, memberikan stabilitas saat digunakan oleh anak-anak.",
+        "image": "images/uploads/kaki-penyanggah.webp"
+      },
+      {
+        "id": 3,
+        "name": "Papan Tulis Anak dengan Penyangga",
+        "price": 24000,
+        "description": "Papan tulis anak praktis dengan penyangga, cocok untuk belajar dan bermain di mana saja.",
+        "image": "images/uploads/papan-tulis-kecil-kaki.webp"
+      },
+      {
+        "id": 4,
+        "name": "Papan Tulis Anak 42x52 dengan Penyangga",
+        "price": 45000,
+        "description": "Papan tulis anak ukuran 42x52 cm dengan penyangga, ideal untuk aktivitas belajar yang lebih luas.",
+        "image": "images/uploads/papan-tulis-gede.webp"
+      },
+      {
+        "id": 5,
+        "name": "Spidol",
+        "price": 4000,
+        "description": "Spidol warna berkualitas untuk papan tulis, aman untuk anak-anak dan mudah dihapus.",
+        "image": "images/uploads/spidol.webp"
+      },
+      {
+        "id": 6,
+        "name": "Excavator Remote Control",
+        "price": 200000,
+        "description": "Mainan excavator remote control, cocok untuk anak-anak yang suka bermain simulasi konstruksi.",
+        "image": "images/uploads/excavator.webp"
+      },
+      {
+        "id": 7,
+        "name": "Pop Lights/Pop Pipes",
+        "price": 9500,
+        "description": "Pop lights/pop pipes yang fleksibel, dapat dibentuk menjadi berbagai bentuk untuk permainan kreatif.",
+        "image": "images/uploads/pop-light.webp"
+      },
+      {
+        "id": 8,
+        "name": "Celana Jogger",
+        "price": 35000,
+        "description": "Celana jogger anak yang nyaman, terbuat dari bahan lembut, cocok untuk aktivitas sehari-hari.",
+        "image": "images/uploads/celana-jogger.webp"
+      },
+      {
+        "id": 9,
+        "name": "Kaos Kaki Bayi",
+        "price": 9500,
+        "description": "Kaos kaki bayi yang lembut dan hangat, dirancang untuk menjaga kaki bayi tetap nyaman.",
+        "image": "images/uploads/kaos-kaki-bayi.webp"
+      },
+      {
+        "id": 10,
+        "name": "Kaos Kaki Anak",
+        "price": 9500,
+        "description": "Kaos kaki anak dengan desain lucu, nyaman dipakai sepanjang hari untuk berbagai aktivitas.",
+        "image": "images/uploads/kaos-kaki-anak.webp"
+      },
+      {
+        "id": 11,
+        "name": "Kaos Kaki Wanita",
+        "price": 9500,
+        "description": "Kaos kaki wanita yang stylish, cocok untuk melengkapi penampilan sehari-hari.",
+        "image": "images/uploads/kaos-kaki-wanita.webp"
+      },
+      {
+        "id": 12,
+        "name": "Krayon",
+        "price": 9500,
+        "description": "Krayon warna-warni yang aman untuk anak, ideal untuk menggambar dan mewarnai.",
+        "image": "images/uploads/krayon.webp"
+      },
+      {
+        "id": 13,
+        "name": "Meja Belajar Lipat",
+        "price": 24000,
+        "description": "Meja belajar lipat praktis untuk anak, mudah disimpan dan cocok untuk belajar di mana saja.",
+        "image": "images/uploads/meja-belajar.webp"
+      },
+      {
+        "id": 14,
+        "name": "Kacamata Renang Anak",
+        "price": 6700,
+        "description": "Kacamata renang anak yang nyaman, melindungi mata dari air saat berenang dengan desain lucu.",
+        "image": "images/uploads/kacamata-renang.webp"
+      },
+      {
+        "id": 15,
+        "name": "Celana Pendek",
+        "price": 25000,
+        "description": "Celana pendek anak yang ringan dan nyaman, cocok untuk bermain atau aktivitas santai.",
+        "image": "images/uploads/celana-pendek.webp"
+      },
+      {
+        "id": 16,
+        "name": "Buku Mewarnai Anak",
+        "price": 9500,
+        "description": "Buku mewarnai anak dengan gambar-gambar menarik, membantu mengasah kreativitas dan motorik.",
+        "image": "images/uploads/buku-mewarnai.webp"
+      }
+    ]
+  }

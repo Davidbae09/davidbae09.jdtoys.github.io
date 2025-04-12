@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JD Toys</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigasi -->
+    <nav>
+        <a href="#home" class="logo"><img src="images/jd.png" alt="JD Toys Logo"></a>
+        <ul>
+            <li><a href="#home">Halaman Utama</a></li>
+            <li><a href="#about">Tentang Kami</a></li>
+            <li><a href="https://wa.me/123456789?text=Halo%20JD%20Toys,%20saya%20ingin%20menanyakan%20informasi%20tentang%20produk." target="_blank">Kontak</a></li>
+            <li><a href="https://shopee.co.id/jd_toys?categoryId=100638&entryPoint=ShopByPDP&itemId=3844645299" target="_blank" class="shopee-btn"><i class="fas fa-shopping-cart"></i> Beli di Shopee</a></li>
+            <li><a href="#admin">Admin</a></li>
+        </ul>
+    </nav>
+
+    <!-- Konten Dinamis -->
+    <div id="content"></div>
+
+    <!-- Modal -->
+    <div id="detail_modal" class="detail-modal">
+        <div class="detail-modal-content">
+            <img id="modal_image" src="" alt="Product Image">
+            <h3 id="modal_name"></h3>
+            <p id="modal_description"></p>
+            <p class="price" id="modal_price"></p>
+            <button onclick="closeDetailModal()">Tutup</button>
+        </div>
+    </div>
+
+    <div id="zoom_modal" class="zoom-modal">
+        <div class="zoom-modal-content">
+            <span class="close-zoom" onclick="closeZoomModal()">×</span>
+            <img id="zoom_image" src="" alt="Zoomed Image">
+        </div>
+    </div>
+
+    <div id="edit_modal" class="edit-modal">
+        <div class="edit-modal-content">
+            <h3>Edit Produk</h3>
+            <form id="edit_form">
+                <input type="hidden" id="edit_id">
+                <input type="hidden" id="edit_current_image">
+                <label for="edit_name">Nama Produk</label>
+                <input type="text" id="edit_name" required>
+                <label for="edit_price">Harga (Rp)</label>
+                <input type="number" id="edit_price" required>
+                <label for="edit_description">Deskripsi</label>
+                <textarea id="edit_description" required></textarea>
+                <label for="edit_image">Gambar (Opsional)</label>
+                <div class="current-image" id="current_image"></div>
+                <div class="file-input-wrapper">
+                    <input type="file" id="edit_image" accept="image/*">
+                    <span id="current_file_name" class="current-file-name"></span>
+                </div>
+                <div class="button-group">
+                    <button type="submit">Simpan</button>
+                    <button type="button" onclick="closeEditForm()">Batal</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="scripts.js"></script>
+</body>
+</html>
