@@ -5,13 +5,28 @@ let currentProducts = [];
 
 // Muat data JSON
 fetch('data.json')
-    .then(response => response.json())
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.json();
+    })
     .then(json => {
         data = json;
+        console.log('Data dari data.json:', data); // Debugging: Lihat isi data
         currentProducts = [...data.products];
         init();
     })
-    .catch(error => console.error('Gagal memuat data:', error));
+    .catch(error => {
+        console.error('Gagal memuat data:', error);
+        // Tampilkan pesan error di UI
+        document.getElementById('content').innerHTML = `
+            <div class="container">
+                <h2>Error</h2>
+                <p>Gagal memuat data: ${error.message}</p>
+            </div>
+        `;
+    });
 
 // Inisialisasi
 function init() {
@@ -230,7 +245,11 @@ function handleLogin() {
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
     const error = document.getElementById('login_error');
-    const hashedPassword = sha1(password); // Asumsi ada library SHA-1
+    const hashedPassword = sha1(password);
+    console.log('Username:', username); // Debugging
+    console.log('Password:', password); // Debugging
+    console.log('Hashed Password:', hashedPassword); // Debugging
+    console.log('Admins:', data.admins); // Debugging
     const admin = data.admins.find(a => a.username === username && a.password === hashedPassword);
     if (admin) {
         isAdmin = true;
