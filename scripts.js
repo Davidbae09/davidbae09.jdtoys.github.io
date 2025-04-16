@@ -132,7 +132,7 @@ function renderAbout() {
         <div class="about-container">
             <div class="about-content">
                 <h2>Kami Adalah JD Toys</h2>
-                <p>JD Toys adalah UMKM yang berdedikasi untuk menyediakan peralatan belajar terbaik seperti papan tulis, meja belajar, dan produk pendukung lainnya. Didirikan pada tahun 2025, kami berkomitmen untuk menciptakan lingkungan belajar yang nyaman dan inspiratif bagi anak-anak dan pelajar di seluruh Indonesia.</p>
+                <p>JD Toys adalah UMKM yang berdedikasi untuk menyediakan peralatan belajar terbaik seperti papan tulis, meja belajar, dan produk pendukung lainnya. Didirikan pada tahun 2021, kami berkomitmen untuk menciptakan lingkungan belajar yang nyaman dan inspiratif bagi anak-anak dan pelajar di seluruh Indonesia.</p>
             </div>
             <div class="features">
                 <div class="feature-card">
