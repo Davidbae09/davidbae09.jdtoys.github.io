@@ -152,17 +152,21 @@ function renderHome() {
             </div>
         </div>
         <div class="landing-section zigzag">
+           <div class="icon">
+                <img src="https://img.icons8.com/color/96/book.png" alt="note">
+            </div>
             <div class="text-content">
                 <h2>Kualitas Produk Terjamin dengan Lebih dari 25.000 Review dari Pelanggan Setia Kami!!!</h2>
             </div>
         </div>
         <div class="landing-section zigzag reverse">
+           <div class="icon">
+                <img src="https://img.icons8.com/color/96/information.png" alt="NB">
+            </div>
             <div class="text-content">
                 <h2>Tunggu apa lagi? Jangan lewatkan kesempatan anda untuk mempunyai produk dari JDTOYS</h2>
             </div>
         </div>
-
-
     `;
 }
 
