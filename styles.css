@@ -3,15 +3,15 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
 body {
-    font-family: 'Poppins', Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f0f4f8;
     color: #333;
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
@@ -21,38 +21,23 @@ main {
     flex: 1;
 }
 
-/* Container Styles */
-.container {
-    flex: 1;
-    max-width: 1200px;
-    margin: 60px auto;
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-/* Untuk form login atau lainnya dengan max-width lebih kecil */
-.container.narrow {
-    max-width: 400px;
-}
-
 /* Navigation Styles */
 nav {
-    background-color: #0073e6; /* Biru */
+    background-color: #0073e6;
     padding: 15px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     position: sticky;
     top: 0;
     z-index: 1000;
     width: 100%;
     box-sizing: border-box;
-    min-height: 60px;
 }
 
 nav .logo img {
-    height: 40px;
+    height: 45px;
     border-radius: 50%;
     object-fit: cover;
 }
@@ -72,7 +57,8 @@ nav ul li {
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 500;
+    font-size: 1.1em;
     transition: color 0.3s ease;
 }
 
@@ -81,20 +67,21 @@ nav ul li a:hover {
 }
 
 nav ul li .shopee-btn {
-    background-color: #ee4d2d; /* Warna oranye Shopee */
+    background-color: #ee4d2d;
     color: white;
-    padding: 8px 15px;
+    padding: 10px 20px;
     border-radius: 25px;
     text-decoration: none;
     font-weight: 600;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
     display: flex;
     align-items: center;
     gap: 8px;
 }
 
 nav ul li .shopee-btn:hover {
-    background-color: #d73211; /* Oranye Shopee lebih gelap */
+    background-color: #d73211;
+    transform: scale(1.05);
 }
 
 nav ul li .shopee-btn i {
@@ -102,94 +89,156 @@ nav ul li .shopee-btn i {
 }
 
 /* Hero Section */
-.hero {
-    background: linear-gradient(rgba(0, 115, 230, 0.7), rgba(0, 115, 230, 0.7)), url('https://images.unsplash.com/photo-1596462502278-27bfdc403348?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+.hero-section {
+    background: linear-gradient(rgba(0, 115, 230, 0.7), rgba(0, 115, 230, 0.7));
     background-size: cover;
     background-position: center;
-    height: 400px;
+    min-height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     color: white;
-    animation: fadeIn 1s ease-in-out;
 }
 
-.hero h1 {
-    font-size: 3em;
+.hero-section h1 {
+    font-size: 3.5em;
     margin: 0;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
 
-.hero p {
-    font-size: 1.2em;
-    margin: 10px 0 0;
+.hero-section p {
+    font-size: 1.3em;
     max-width: 600px;
-    text-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    margin: 20px auto;
 }
 
-/* Header Section */
-header {
-    position: relative;
+.hero-section .cta-btn {
+    background-color: #ee4d2d;
     color: white;
-    padding: 60px 20px;
+    padding: 15px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.hero-section .cta-btn:hover {
+    background-color: #d73211;
+    transform: scale(1.05);
+}
+
+/* Landing Page Sections */
+.landing-section.zigzag {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    gap: 30px;
+    padding: 40px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.landing-section.zigzag.reverse {
+    flex-direction: row-reverse;
+}
+
+.landing-section.zigzag .text-content {
+    flex: 1 1 60%;
+}
+
+.landing-section.zigzag .text-content h2 {
+    color: #0073e6;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.landing-section.zigzag .text-content p {
+    font-size: 1em;
+    line-height: 1.7;
+    color: #444;
+}
+
+.landing-section.zigzag .icon {
+    flex: 1 1 30%;
     text-align: center;
-    animation: fadeIn 1s ease-in-out;
-    background: linear-gradient(rgba(0, 115, 230, 0.8), rgba(0, 115, 230, 0.8));
+}
+
+.landing-section.zigzag .icon img {
+    max-width: 100px;
+    height: auto;
+}
+
+
+/* Products Section */
+.products-section {
+    min-height: auto; /* Produk tidak perlu memenuhi layar penuh karena banyak item */
+    padding: 40px 20px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    margin: 20px auto;
+    max-width: 1100px;
+    text-align: center;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.product-card {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    min-height: 380px;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.product-card img {
+    max-width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover img {
+    transform: scale(1.05);
+}
+
+.product-card h3 {
+    font-size: 1.3em;
+    color: #333;
+    margin: 10px 0;
+    text-align: center;
+    line-height: 1.2;
+    min-height: 3em; /* Menyamakan tinggi heading */
     overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
 }
 
-.silhouette {
-    position: absolute;
-    color: white;
-    opacity: 0.5;
-    z-index: 0;
-}
-
-.pen {
-    top: 15%;
-    left: 15%;
-    font-size: 60px;
-}
-
-.pencil {
-    top: 70%;
-    left: 35%;
-    font-size: 50px;
-}
-
-.book {
-    top: 30%;
-    right: 35%;
-    font-size: 70px;
-}
-
-.ruler {
-    bottom: 20%;
-    right: 15%;
-    font-size: 40px;
-}
-
-header h1 {
-    font-size: 2.8em;
-    margin: 0;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
-    position: relative;
-    z-index: 1;
-}
-
-header p {
+.product-card .price {
+    font-weight: 600;
+    color: #0073e6;
     font-size: 1.2em;
-    margin: 10px 0 0;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    text-shadow: 0 1px 3px rgba(0,0,0,0.2);
-    position: relative;
-    z-index: 1;
+    margin: 10px 0;
 }
-
-/* About Section */
 .about-container {
     max-width: 1100px;
     margin: 60px auto;
@@ -207,15 +256,6 @@ header p {
     font-size: 2.2em;
     margin-bottom: 20px;
 }
-
-.about-content p {
-    font-size: 1.1em;
-    line-height: 1.8;
-    color: #555;
-    max-width: 700px;
-    margin: 0 auto;
-}
-
 /* Features Section */
 .features {
     display: grid;
@@ -256,237 +296,61 @@ header p {
     color: #777;
     line-height: 1.6;
 }
-
-/* Products Section */
-.products {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-}
-
-.product-card {
-    background-color: white;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    padding: 20px;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    animation: slideUp 0.8s ease-in-out;
-    box-sizing: border-box;
-}
-
-.product-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-}
-
-.product-card img {
-    max-width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 15px;
-    cursor: pointer;
-}
-
-.product-card h3 {
-    font-size: 1.4em;
-    color: #333;
-    margin: 10px 0;
-}
-
-.product-card p {
-    color: #777;
-    font-size: 1em;
-    margin: 10px 0;
+.about-content p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: #555;
+    max-width: 700px;
+    margin: 0 auto;
 }
 
 .product-card .button-group {
     display: flex;
     justify-content: center;
     gap: 10px;
-    margin-top: 15px;
+    margin-top: auto;
 }
 
-.product-card button {
-    background-color: #0073e6; /* Biru */
+.product-card button, .product-card a {
+    background-color: #0073e6;
     color: white;
     border: none;
     padding: 12px 25px;
     border-radius: 25px;
     cursor: pointer;
     font-weight: 600;
+    text-decoration: none;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .product-card button.detail-btn {
-    background-color: #f39c12; /* Oranye (komplementer biru) */
+    background-color: #f39c12;
+    color: #333;
 }
 
-.product-card button:hover {
-    background-color: #005bb5; /* Biru lebih gelap */
+.product-card button:hover, .product-card a:hover {
+    background-color: #005bb5;
     transform: scale(1.05);
 }
 
 .product-card button.detail-btn:hover {
-    background-color: #e67e22; /* Oranye lebih gelap */
-}
-
-/* Admin Section */
-.header-admin {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 30px;
-}
-
-.header-admin h2 {
-    margin: 0;
-}
-
-.logout-btn {
-    background-color: #e74c3c;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 25px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: background-color 0.3s ease;
-}
-
-.logout-btn:hover {
-    background-color: #c0392b;
-}
-
-/* Form Styles */
-form {
-    background-color: white;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-    margin-bottom: 40px;
-    animation: slideUp 0.8s ease-in-out;
-}
-
-form label {
-    display: block;
-    margin: 10px 0 5px;
-    font-weight: 600;
-    color: #333;
-}
-
-label {
-    display: block;
-    margin: 10px 0 5px;
-    color: #333;
-}
-
-input, textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-sizing: border-box;
-    font-size: 1em;
-    transition: border-color 0.3s ease;
-}
-
-input:focus {
-    border-color: #0073e6;
-    outline: none;
-    box-shadow: 0 0 5px rgba(0, 115, 230, 0.3);
-}
-
-textarea {
-    height: 100px;
-    resize: none;
-    overflow-y: auto;
-}
-
-button {
-    background-color: #0073e6;
-    color: white;
-    border: none;
-    padding: 12px 25px;
-    border-radius: 25px;
-    cursor: pointer;
-    font-weight: 600;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-button:hover {
-    background-color: #005bb5;
-    transform: scale(1.02);
-}
-
-button:disabled {
-    background-color: #cccccc;
-    cursor: not-allowed;
-}
-
-.error {
-    color: #e74c3c; /* Merah */
-    text-align: center;
-    margin-bottom: 15px;
-    font-size: 0.9em;
-}
-
-/* Table Styles */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    background-color: white;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    border-radius: 15px;
-    overflow: hidden;
-}
-
-th, td {
-    padding: 15px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-}
-
-th {
-    background-color: #0073e6;
-    color: white;
-}
-
-td img {
-    border-radius: 5px;
-}
-
-.edit-btn, .delete-btn {
-    padding: 8px 15px;
-    border: none;
-    border-radius: 25px;
-    cursor: pointer;
-    font-weight: 600;
-    transition: background-color 0.3s ease;
-    margin-right: 5px;
-}
-
-.edit-btn {
-    background-color: #f39c12;
-    color: white;
-}
-
-.edit-btn:hover {
     background-color: #e67e22;
 }
 
-.delete-btn {
+.product-card .badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
     background-color: #e74c3c;
     color: white;
-}
-
-.delete-btn:hover {
-    background-color: #c0392b;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.8em;
+    font-weight: 600;
 }
 
 /* Modal Styles */
-.edit-modal, .detail-modal, .zoom-modal {
+.detail-modal, .zoom-modal {
     display: none;
     position: fixed;
     top: 0;
@@ -497,100 +361,23 @@ td img {
     justify-content: center;
     align-items: center;
     z-index: 2000;
-    animation: fadeIn 0.3s ease-in-out;
 }
 
-.edit-modal-content, .detail-modal-content {
+.detail-modal-content {
     background-color: white;
     padding: 30px;
     border-radius: 15px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.3);
     width: 90%;
     max-width: 500px;
-    position: relative;
     text-align: center;
 }
 
-.edit-modal-content h3, .detail-modal-content h3 {
+.detail-modal-content h3 {
     margin: 0 0 15px;
     color: #0073e6;
     font-size: 1.8em;
     font-weight: 600;
-}
-
-.edit-modal-content label {
-    display: block;
-    text-align: left;
-    margin: 10px 0 5px;
-    color: #333;
-}
-
-.edit-modal-content input,
-.edit-modal-content textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-sizing: border-box;
-}
-
-.edit-modal-content textarea {
-    height: 100px;
-    resize: none;
-    overflow-y: auto;
-}
-
-.edit-modal-content .current-image {
-    margin-bottom: 15px;
-    text-align: center;
-}
-
-.file-input-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 15px;
-}
-
-.current-file-name {
-    color: #777;
-    font-size: 0.9em;
-    font-style: italic;
-}
-
-.edit-modal-content .button-group {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 20px;
-}
-
-.edit-modal-content button {
-    padding: 12px 25px;
-    border: none;
-    border-radius: 25px;
-    cursor: pointer;
-    font-weight: 600;
-    transition: background-color 0.3s ease;
-}
-
-.edit-modal-content button[name="edit"] {
-    background-color: #0073e6;
-    color: white;
-}
-
-.edit-modal-content button[name="edit"]:hover {
-    background-color: #005bb5;
-}
-
-.edit-modal-content button[type="button"] {
-    background-color: #e74c3c;
-    color: white;
-}
-
-.edit-modal-content button[type="button"]:hover {
-    background-color: #c0392b;
 }
 
 .detail-modal-content img {
@@ -613,12 +400,12 @@ td img {
 
 .detail-modal-content .price {
     font-weight: 600;
-    color: #0073e6; /* Biru */
+    color: #0073e6;
     font-size: 1.2em;
 }
 
 .detail-modal-content button {
-    background-color: #e74c3c; /* Merah untuk tombol tutup */
+    background-color: #e74c3c;
     color: white;
     border: none;
     padding: 12px 25px;
@@ -630,7 +417,7 @@ td img {
 }
 
 .detail-modal-content button:hover {
-    background-color: #c0392b; /* Merah lebih gelap */
+    background-color: #c0392b;
 }
 
 .zoom-modal-content {
@@ -675,20 +462,30 @@ footer {
     background-color: #0073e6;
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 30px 20px;
     width: 100%;
-    margin-top: auto;
 }
 
-/* Animations */
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
 }
 
-@keyframes slideUp {
-    from { opacity: 0; transform: translateY(50px); }
-    to { opacity: 1; transform: translateY(0); }
+.footer-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: white;
+    font-size: 1.5em;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #cce4ff;
 }
 
 /* Media Queries */
@@ -696,20 +493,35 @@ footer {
     .products {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .hero-section h1 {
+        font-size: 2.5em;
+    }
+
+    .hero-section p {
+        font-size: 1.1em;
+    }
+
+    .landing-section h2 {
+        font-size: 2em;
+    }
 }
 
 @media (max-width: 600px) {
-    nav ul li .shopee-btn {
-        padding: 6px 10px;
-        font-size: 0.9em;
+    .products {
+        grid-template-columns: 1fr;
     }
 
-    nav ul li .shopee-btn i {
+    .hero-section h1 {
+        font-size: 2em;
+    }
+
+    .hero-section p {
         font-size: 1em;
     }
 
-    .products {
-        grid-template-columns: 1fr;
+    .landing-section h2 {
+        font-size: 1.8em;
     }
 
     .close-zoom {
