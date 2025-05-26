@@ -151,12 +151,12 @@ function renderHome() {
                 <p>Kami memberikan <strong>jaminan uang kembali 100%</strong></p>
             </div>
         </div>
-        <div class="landing-section">
+        <div class="landing-section zigzag">
             <div class="text-content">
                 <h2>Kualitas Produk Terjamin dengan Lebih dari 25.000 Review dari Pelanggan Setia Kami!!!</h2>
             </div>
         </div>
-        <div class="landing-section">
+        <div class="landing-section zigzag reverse">
             <div class="text-content">
                 <h2>Tunggu apa lagi? Jangan lewatkan kesempatan anda untuk mempunyai produk dari JDTOYS</h2>
             </div>
