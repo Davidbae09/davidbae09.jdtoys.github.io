@@ -151,13 +151,14 @@ function renderHome() {
                 <p>Kami memberikan <strong>jaminan uang kembali 100%</strong></p>
             </div>
         </div>
-
-        <div class="landing-section zigzag">
-            <div class="icon">
-                <img src="https://img.icons8.com/color/96/note.png" alt="Info Penting">
-            </div>
+        <div class="landing-section">
             <div class="text-content">
-                <h2>Jangan lewatkan kesempatan anda untuk mempunyai produk terjangkau dari kami</h2>
+                <h2>Kualitas Produk Terjamin dengan Lebih dari 25.000 Review dari Pelanggan Setia Kami!!!</h2>
+            </div>
+        </div>
+        <div class="landing-section">
+            <div class="text-content">
+                <h2>Tunggu apa lagi? Jangan lewatkan kesempatan anda untuk mempunyai produk dari JDTOYS</h2>
             </div>
         </div>
 
