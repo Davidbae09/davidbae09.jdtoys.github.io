@@ -124,7 +124,7 @@ function renderHome() {
                         <p class="price">Rp ${product.price.toLocaleString('id-ID')}</p>
                         <div class="button-group">
                             <button class="detail-btn" onclick="showDetailModal('${product.name}', '${product.image || 'https://via.placeholder.com/150'}', '${product.description}', '${product.price.toLocaleString('id-ID')}')">Lihat Detail</button>
-                            <a href="https://shopee.co.id/" target="_blank">Beli Sekarang</a>
+                            <a href="https://shopee.co.id/jd_toys?categoryId=100638&entryPoint=ShopByPDP&itemId=3844645299" target="_blank">Beli Sekarang</a>
                         </div>
                         <span class="badge">Stok Terbatas</span>
                     </div>
